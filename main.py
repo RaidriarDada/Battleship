@@ -49,7 +49,7 @@ time.sleep(2)
 
 def getData():
     switchList = []
-    a = "2"
+    a = "0"
     ser.write(a.encode())
     for i in range(10):
         read = ser.readline()
@@ -62,7 +62,8 @@ def getData():
 
 def getDataShort():
     switchList = []
-    ser.write(b'y')
+    a = '1'
+    ser.write(a.encode())
     for i in range(5):
         read = ser.readline()
         data = read.decode()
